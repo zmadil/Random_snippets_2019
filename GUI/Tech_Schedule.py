@@ -106,8 +106,8 @@ def ApplytoLabel():
     
 
 
-
-box_list = []   # Create list of Entrys
+# Create list of Entrys
+box_list = []   
 floors=[]
 def Boxes():
     xx=size.get()
@@ -118,7 +118,7 @@ def Boxes():
     ApplytoLabel1=tk.Button(left_frame,text="Proceed",command=ApplytoLabel)
     ApplytoLabel1.pack()
 
-#Bottom Half
+#Bottom Half Frame
 
 
 Array = tk.Frame(left_frame)
