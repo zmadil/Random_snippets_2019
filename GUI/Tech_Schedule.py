@@ -118,7 +118,7 @@ def Boxes():
     ApplytoLabel1=tk.Button(left_frame,text="Proceed",command=ApplytoLabel)
     ApplytoLabel1.pack()
 
-
+#Bottom Half
 
 
 Array = tk.Frame(left_frame)
