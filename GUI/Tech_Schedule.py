@@ -31,14 +31,12 @@ def get_weather(sl):
 
     label['text']= formatting(weather)
     
-    
+    print(weather)
     print(weather['name'])
     print(weather['weather'][0]['description'])
     print(weather['main']['temp'])
 
-#api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
-#api.openweathermap.org/data/2.5/weather?q={city name} current weather
-#83deace47af180a3f5d2cefb1ba96153  API
+
 root = tk.Tk()
 root.geometry('700x550')
 root.title('Tech Floor Assignment')
@@ -138,7 +136,7 @@ SizeofArray.grid(row=5,column=2,sticky="w")
 
 
 
-########################
+############################
 
 
 
