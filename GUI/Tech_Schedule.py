@@ -31,7 +31,6 @@ def get_weather(sl):
 
     label['text']= formatting(weather)
     
-    print(weather)
     print(weather['name'])
     print(weather['weather'][0]['description'])
     print(weather['main']['temp'])
@@ -75,25 +74,25 @@ left_frame.place(relx=0, rely=0.5,relwidth=0.5,relheight=0.5)
 
 
 def ApplytoLabel():
-    xx=size.get()
-    if xx==2:
+    get_size=size.get()
+    if get_size==2:
         floors=['1st and BH', '2nd and 3rd']
         random.shuffle(floors)
-        for i in range(xx):
+        for i in range(get_size):
             element = box_list[i].get() # Get value from corresponding Entry
             ArrayLabel=tk.Label(left_frame,text='The Tech ' +element +' will have ' +floors[i] )
             ArrayLabel.pack()
-    elif xx==3:
+    elif get_size==3:
         floors=['1st and BH', '2nd','3rd']
         random.shuffle(floors)
-        for i in range(xx):
+        for i in range(get_size):
             element = box_list[i].get() # Get value from corresponding Entry
             ArrayLabel=tk.Label(left_frame,text='The Tech ' +element +' will have ' + floors[i])
             ArrayLabel.pack()
-    elif xx == 4:
+    elif get_size == 4:
         floors=['1st', '2nd', '3rd','BH']
         random.shuffle(floors)
-        for i in range(xx):
+        for i in range(get_size):
             element = box_list[i].get() # Get value from corresponding Entry
             ArrayLabel=tk.Label(left_frame,text='The Tech ' +element +' will have ' + floors[i])
             ArrayLabel.pack()
@@ -108,8 +107,8 @@ def ApplytoLabel():
 box_list = []   
 floors=[]
 def Boxes():
-    xx=size.get()
-    for i in range(xx):        
+    get_size=size.get()
+    for i in range(get_size):        
         box=tk.Entry(left_frame)
         box.pack()
         box_list.append(box)    # Append current Entry to list
