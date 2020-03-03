@@ -5,10 +5,11 @@ from tkinter import messagebox
 import random
 import sqlite3
 
-
+#Function that executes when the button is pressed
 def test_function(entry):
     print('Button clicked! ', entry)
 
+#Manipulating the JSON data to gather the required information
 def formatting(weather):
     try:
         city=weather['name']
@@ -21,7 +22,7 @@ def formatting(weather):
 
     return result
 
-
+#Fuction that captures the data
 def get_weather(sl): 
     key= '83deace47af180a3f5d2cefb1ba96153'
     url= 'https://api.openweathermap.org/data/2.5/weather'
@@ -36,17 +37,20 @@ def get_weather(sl):
     print(weather['weather'][0]['description'])
     print(weather['main']['temp'])
 
+#My API keys
 #api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
 #api.openweathermap.org/data/2.5/weather?q={city name} current weather
 #83deace47af180a3f5d2cefb1ba96153  API
+
+#Root diectory 
 root = tk.Tk()
 root.geometry('700x550')
 root.title('Tech Floor Assignment')
 root.resizable(width=False, height=False)
 
 
-
-background_image=tk.PhotoImage(file='CheckList.png')
+#Background image that executes for GUI
+#background_image=tk.PhotoImage(file='CheckList.png')
 background_label=tk.Label(root,image=background_image)
 background_label.place(relx=0,rely=0,relwidth=1,relheight=0.5)
 
@@ -74,7 +78,7 @@ left_frame.place(relx=0, rely=0.5,relwidth=0.5,relheight=0.5)
 
 
 
-
+#Where my program is applied to the GUI
 
 def ApplytoLabel():
     xx=size.get()
@@ -107,7 +111,9 @@ def ApplytoLabel():
 
 
 
-box_list = []   # Create list of Entrys
+# Create list of Entrys
+
+box_list = []   
 floors=[]
 def Boxes():
     xx=size.get()

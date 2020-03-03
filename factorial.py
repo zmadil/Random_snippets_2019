@@ -1,5 +1,10 @@
-a=['1','1','3','4']
+n=5
 
-b=list(map(int,a))
+def rec_fac(n):
+	if n==1:
+		return 1
+	
+	else:
+		return n*rec_fac(n-1)
 
-print(b)
+print (rec_fac(n))

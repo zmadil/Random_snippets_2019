@@ -1,18 +1,7 @@
-courses= ['English', 'Urdu' , 'Math']
-courses1= ['Angraizi', 'hindi']
+x = "racecar"
+w = "" 
+for i in x: 
+    w = i+w
+if (x==w): 
+	print("YES") 
 
-courses.extend(courses1)  #extends extend 1 list and end
-print (courses)
-print(courses.index('Urdu')) #look for index of a string
-
-
-for subject in courses:
-	print (subject)
-
-for index, course in enumerate(courses, start=1):  #enumerate lets you print index
-	print(index,course)
-
-
-#Tuples not mutable. use () brackets
-#sets use {} brackets
-#-------------
